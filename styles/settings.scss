@@ -1,0 +1,29 @@
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
+@mixin fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@mixin mediaquery($min-width: 1440px, $orientation: false) {
+  @if $orientation {
+    @media screen and (min-width: $min-width) and (orientation: $orientation) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: $min-width) {
+      @content;
+    }
+  }
+}
