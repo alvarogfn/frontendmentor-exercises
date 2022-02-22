@@ -30,7 +30,7 @@ Usuários devem ser capazes de:
 ### Links
 
 - Solution URL: [Github repo](https://github.com/alvarogfn/landing-pages/tree/four-card-feature-section)
-- Live Site URL: [Website](https://landing-pages-indol.vercel.app/)
+- Live Site URL: [Website](https://four-card-feature-section-alvarogfn.vercel.app/)
 
 ## Desenvolvimento
 
