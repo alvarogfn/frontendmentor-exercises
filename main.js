@@ -1,2 +1,2 @@
-import './styles/styles.scss'
-import './styles/credits.scss'
+import './styles/styles.scss';
+import './styles/credits.scss';
