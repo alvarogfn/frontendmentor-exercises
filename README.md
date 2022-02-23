@@ -15,7 +15,7 @@ Usuários devem ser capazes de:
 
 *Mobile*
 
-![Mobile Design](https://imgur.com/W3a4k6J.png)
+![Mobile Design](https://imgur.com/YfGi8J2.png)
 
 *Ultra-Wide Design*
 
