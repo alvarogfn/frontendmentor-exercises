@@ -1,0 +1,197 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+// font-family: 'Big Shoulders Display', cursive;
+// font-family: 'Lexend Deca', sans-serif;
+
+@mixin fullscreen($max-width) {
+  width: 100vw;
+  height: 100vh;
+
+  max-width: $max-width;
+  max-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  background-color: $very-light-gray;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  
+  text-transform: uppercase;
+
+  color: $very-light-gray;
+}
+
+p {
+  color: $transparent-white;
+
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+
+  line-height: 165%;
+}
+
+button {
+  background-color: $very-light-gray;
+  border: none;
+}
+
+#app {
+
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+
+  @include fullscreen(87%);
+}
+
+.app__title--semantic {
+  display: none;
+}
+
+.cards {
+
+  padding: clamp(88px, 9vh, 100px) 0;
+
+  &__card {
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+
+    gap: 36px 0;
+    
+    &--sedans { background-color: $bright-orange;}
+    &--suvs { background-color: $dark-cyan;}
+    &--luxury { background-color: $very-dark-cyan;}
+    
+    &:first-child {
+      border-radius: 8px 8px 0 0;
+    } 
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  &__button {
+    border-radius: 30px;
+
+    padding: 12px 29px;
+
+    border: 2px solid $very-light-gray;
+
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .95rem;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    &--sedans {color: $bright-orange;}
+    &--suvs {color: $dark-cyan}
+    &--luxury {color: $very-dark-cyan}
+
+    transition: 200ms;
+
+    &:hover {
+      color: $very-light-gray;
+      background-color: transparent;
+    }
+  }
+}
+
+// HACK
+.card__text--hack {
+  margin: -14px 0 -11px;
+}
+
+@media (min-width: 1024px) {
+  #app {
+    @include fullscreen(80%)
+  }
+  .cards {
+
+    padding: clamp(44px, 4vh, 100px) 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    
+    &__card {
+      &:first-child {
+        border-radius: 8px 0 0 8px;
+      } 
+      &:last-child {
+        border-radius: 0 8px 8px 0;
+      }
+    }
+  }
+
+  .card__text--hack {
+    margin: -10px 0 10px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  #app {
+    @include fullscreen(64%);
+  }
+
+      
+  .cards {
+    margin-inline: auto;
+    max-width: 1440px;
+  }
+
+  .card__text--hack {
+    margin: -10px 0 50px 0;
+  }
+}
+
+
+// ONLY for attribution :')
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  font-size: .9rem;
+  font-family: 'Lexend Deca', sans-serif;
+
+  text-align: center;
+
+  padding: 2px;
+
+  width: 100%;
+
+  opacity: 60%;
+
+  a {
+
+    text-decoration: none;
+    color: #8d8d8d;
+
+    transition: 200ms;
+    &:hover { color: #006481; }
+  }
+}
