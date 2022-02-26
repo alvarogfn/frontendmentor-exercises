@@ -2,7 +2,7 @@ $dark-magenta: #502050;
 $soft-pink: #ee68a4;
 $dark-grayish-magenta: #937b92;
 $light-grayish-magenta: #f7f2f7;
-$white:#ffffff;
+$white: #ffffff;
 
 * {
   margin: 0;
@@ -24,9 +24,7 @@ $white:#ffffff;
     @media screen and (max-width: $width) and (orientation: $orientation) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @media screen and (max-width: $width) {
       @content;
     }
@@ -34,22 +32,15 @@ $white:#ffffff;
 }
 
 @mixin animation($direction) {
-
   @keyframes push_#{$direction} {
     0% {
-      @if $direction=="left" {
-        transform: translateX(-50px)
-      }
-
-      @else if $direction=="right" {
+      @if $direction== "left" {
+        transform: translateX(-50px);
+      } @else if $direction== "right" {
         transform: translateX(50px);
-      }
-
-      @else if $direction=="top" {
+      } @else if $direction== "top" {
         transform: translateY(50px);
-      }
-
-      @else {
+      } @else {
         transform: translateY(-50px);
       }
     }
@@ -59,27 +50,21 @@ $white:#ffffff;
       transform: translate(0px);
     }
   }
-
 }
-
 
 body {
   @include fullscreen;
   // Background-config
   background-color: $white;
-  background-image: url('./assets/bg-pattern-top-desktop.svg'), url('./assets/bg-pattern-bottom-desktop.svg');
+  background-image: url("./assets/bg-pattern-top-desktop.svg"),
+    url("./assets/bg-pattern-bottom-desktop.svg");
   background-repeat: no-repeat;
   background-size: 40% 40%, 81% 81%;
   background-position: top left, bottom right;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   // font-base
   font-size: 15px;
-  font-family: 'Spartan', sans-serif;
-
+  font-family: "Spartan", sans-serif;
 
   @include animation("left");
   @include animation("top");
@@ -100,16 +85,19 @@ h6 {
   grid-template-columns: 480px 10vw 520px;
   grid-template-rows: 250px 9vh 260px;
   width: max-content;
+  margin: 3rem auto;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap");
 .attribution {
-  font-weight: bold;
-
-  position: fixed;
-  bottom: 0;
-  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Averia Serif Libre", cursive;
+  color: gray;
+  a {
+    color: $dark-magenta;
+  }
 }
-
 
 .header {
   grid-column: 1 / 2;
@@ -128,7 +116,6 @@ h6 {
     font-weight: 700;
     font-weight: 700;
     color: $dark-magenta;
-
   }
 
   &__subtitle {
@@ -136,7 +123,6 @@ h6 {
     font-size: 1rem;
     line-height: 1.4rem;
     color: $dark-grayish-magenta;
-
   }
 }
 
@@ -167,12 +153,12 @@ h6 {
     width: 80%;
     height: 30%;
 
-    border-radius: .3rem;
+    border-radius: 0.3rem;
 
     background-color: $light-grayish-magenta;
     color: $dark-magenta;
     font-weight: 700;
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     &--star {
       padding-right: 1.75rem;
@@ -180,9 +166,7 @@ h6 {
       color: #ff5e00;
       font-size: 1.5rem;
       font-weight: bold;
-
     }
-
 
     opacity: 0;
 
@@ -204,7 +188,6 @@ h6 {
       animation-delay: 300ms;
       align-self: flex-end;
     }
-
   }
 }
 
@@ -243,7 +226,6 @@ h6 {
     &:nth-child(2) {
       align-self: center;
       animation-delay: 400ms;
-
     }
 
     &:nth-child(3) {
@@ -256,7 +238,7 @@ h6 {
     display: grid;
     grid-template-columns: 3.5rem 8rem;
     grid-template-rows: 1.25rem 1rem;
-    column-gap: .5rem;
+    column-gap: 0.5rem;
     height: 3rem;
 
     align-content: center;
@@ -273,14 +255,14 @@ h6 {
     .comment__title {
       grid-column: 2;
       grid-row: 1;
-      font-size: .9rem;
+      font-size: 0.9rem;
       width: 100%;
     }
 
     .comment__verified {
       grid-column: 2;
       grid-row: 2;
-      font-size: .8rem;
+      font-size: 0.8rem;
       font-weight: 400;
       color: $soft-pink;
       width: 100%;
@@ -289,7 +271,7 @@ h6 {
 
   &__about {
     margin-top: 2rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
   }
 }
@@ -344,7 +326,8 @@ h6 {
 
 @include mediaquery(850px) {
   body {
-    background-image: url("./../images/bg-pattern-top-mobile.svg"), url("./../images/bg-pattern-bottom-mobile.svg");
+    background-image: url("./../images/bg-pattern-top-mobile.svg"),
+      url("./../images/bg-pattern-bottom-mobile.svg");
     background-size: 100% 27%, 100% 27%;
     background-position: top center, bottom right;
 
@@ -361,7 +344,7 @@ h6 {
   }
 
   .attribution {
-    font-size: .7rem;
+    font-size: 0.7rem;
     position: static;
   }
 
@@ -383,15 +366,13 @@ h6 {
 
     &__subtitle {
       width: 100%;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 
   .recommend {
     grid-column: 1;
     height: 350px;
-
-
 
     &__list {
       display: flex;
@@ -402,13 +383,12 @@ h6 {
     }
 
     &__item {
-
-      margin: .5rem 0;
+      margin: 0.5rem 0;
 
       width: 100%;
       height: 30%;
 
-      font-size: .8rem;
+      font-size: 0.8rem;
 
       &--star {
         font-size: 1.3rem;
@@ -437,20 +417,19 @@ h6 {
     }
 
     &__header {
-      margin-top: .8rem;
+      margin-top: 0.8rem;
 
       .comment__title {
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
 
       .comment__verified {
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
-
     }
 
     &__about {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
   }
 }
