@@ -23,13 +23,11 @@
         <p class="presentation__text">No credit card required.</p>
       </header>
       <main class="plan">
-        <section>
+        <div>
           <form class="traffic">
             <label class="traffic__amount" for="amount_traffic">
-              <p>
-                <span class="traffic__pageviews" id="pageviews">100K</span>
-                Pageviews
-              </p>
+              <span class="traffic__pageviews" id="pageviews">100K</span>
+              Pageviews
             </label>
             <input
               id="range"
@@ -62,21 +60,21 @@
               </p>
             </div>
           </form>
-        </section>
-        <div class="fix">
-          <section class="advantages">
-            <p class="advantages__item">Unlimited websites</p>
-            <p class="advantages__item">100% data ownership</p>
-            <p class="advantages__item">Email reports</p>
-          </section>
-          <div class="start">
-            <button class="start__button">Start my trial</button>
+        </div>
+        <div class="advantages">
+          <ul class="advantages__list">
+            <li class="advantages__item">Unlimited websites</li>
+            <li class="advantages__item">100% data ownership</li>
+            <li class="advantages__item">Email reports</li>
+          </ul>
+          <div class="advantages__start">
+            <button class="advantages__button">Start my trial</button>
           </div>
         </div>
       </main>
     </div>
     <footer>
-      <section class="attribution">
+      <div class="attribution">
         Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"
@@ -90,7 +88,7 @@
           @Kasokinho
         </a>
         .
-      </section>
+      </div>
     </footer>
     <script src="./main.js" type="module"></script>
   </body>
