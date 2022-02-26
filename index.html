@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="presentation">
+        <h1 class="presentation__features">Simple, traffic-based pricing</h1>
+        <p class="presentation__text">Sign-up for our 30-day trial.</p>
+        <p class="presentation__text">No credit card required.</p>
+      </header>
+      <main class="plan">
+        <section>
+          <form class="traffic">
+            <label class="traffic__amount" for="amount_traffic">
+              <p>
+                <span class="traffic__pageviews" id="pageviews">100K</span>
+                Pageviews
+              </p>
+            </label>
+            <input
+              id="range"
+              class="traffic__range"
+              type="range"
+              name="amount_traffic"
+            />
+
+            <p class="traffic__signature">
+              <span class="traffic__price" id="price">$16.00</span>/ month
+            </p>
+
+            <div class="monthly">
+              <p class="monthly__text">Monthly Billing</p>
+              <div class="checkbox" id="checkbox">
+                <input
+                  class="checkbox__box"
+                  type="checkbox"
+                  name="monthly_discount"
+                  id="toggle"
+                />
+                <label class="checkbox__circle" for="toggle"> </label>
+              </div>
+              <p class="monthly__text">
+                Yearly Billing
+                <span class="monthly__percentage"
+                  >25%
+                  <span class="monthly__discount">discount</span>
+                </span>
+              </p>
+            </div>
+          </form>
+        </section>
+        <div class="fix">
+          <section class="advantages">
+            <p class="advantages__item">Unlimited websites</p>
+            <p class="advantages__item">100% data ownership</p>
+            <p class="advantages__item">Email reports</p>
+          </section>
+          <div class="start">
+            <button class="start__button">Start my trial</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <section class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel=""
+        >
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="https://twitter.com/Kasokinho" target="_blank" rel="">
+          @Kasokinho
+        </a>
+        .
+      </section>
+    </footer>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
