@@ -20,8 +20,8 @@ Usuários devem ser capazes de:
 
 ### Links
 
-- Solution URL: [Github repo](https://github.com/alvarogfn/landing-pages/tree/social-proof-section)
-- Live Site URL: [Website](https://landing-pages-indol.vercel.app/)
+- URL da solução: [Github repo](https://github.com/alvarogfn/landing-pages/tree/social-proof-section)
+- Site: [Website](https://social-proof-section-alvarogfn.vercel.app/)
 
 ## Desenvolvimento
 
