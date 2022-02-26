@@ -1,6 +1,6 @@
-# Frontend Mentor - Four Card Feature Section
+# Frontend Mentor - Interactive pricing component
 
-Essa é uma solução para o desafio **Four Card Feature Section** do FrontEndMentor.
+Essa é uma solução para o desafio **Interactive pricing component** do FrontEndMentor.
 
 
 ### O desafio
